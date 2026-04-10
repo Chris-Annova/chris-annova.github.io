@@ -1097,7 +1097,7 @@ function renderTables() {
     const cp = contacts + promises;
     const cph = hours > 0 ? fx((contacts + promises) / hours, 2) : (d.cph || '-');
     const pph = contacts > 0 ? fx(promises / hours, 2) : (d.pph || '—');
-    const comh = promises > 0 ? fx(completes_oer / promises, 2) : (d.comh || '—');
+    const comh = promises > 0 ? fx(completes_oer / hours, 2) : (d.comh || '—');
     const score = agentScore(d);
     return `<tr class="${rcls(score)}" onclick="openEditModal(${d.id})">
       <td><input type="checkbox" class="select-row-checkbox" data-module="oer" data-id="${d.id}" onchange="updateDeleteButton('oer')" style="cursor:pointer"/></td>
