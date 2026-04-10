@@ -1082,8 +1082,8 @@ function renderTables() {
       <td><b>${d.completes || 0}</b></td>
       <td>${comDay}</td>
       <td>${d.target || 0}</td>
-      ${Math.round(d.weekly || 0)}
-      ${Math.round(d.dailyT || 0)}
+      <td>${d.weekly || '—'}</td>
+      <td>${dailyT}</td>
       <td><span class="${deficit > 0 ? 'tag red' : 'tag green'}">${deficit > 0 ? deficit : '✓'}</span></td>
       <td>${metTag(metPct)}</td>
       <td><button class="btn success sm" onclick="event.stopPropagation();openEditModal(${d.id})">✏️</button></td>
