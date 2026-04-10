@@ -1057,8 +1057,8 @@ function renderTables() {
       <td><b>${d.completes || 0}</b></td>
       <td>${comDay}</td>
       <td>${d.target || 0}</td>
-      <td>${d.weekly || '—'}</td>
-      <td>${dailyT}</td>
+      <td>${d.weekly ? Math.round(d.weekly) : '-'}</td>
+      <td>${d.dailyT ? Math.round(d.dailyT) : '-'}</td>
       <td><span class="${deficit > 0 ? 'tag red' : 'tag green'}">${deficit > 0 ? deficit : '✓'}</span></td>
       <td>${metTag(d.com_pct)}</td>
       <td>${metTag(d.promise_pct)}</td>
